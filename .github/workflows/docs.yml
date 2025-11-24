@@ -17,6 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
+      is_default: ${{ steps.branch-name.outputs.is_default }}
       is_tag: ${{ steps.branch-name.outputs.is_tag }}
     steps:
       - uses: actions/checkout@v4
